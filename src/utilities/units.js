@@ -17,38 +17,42 @@ module.exports = {
       },
 
       firstName(input) {
-        if(input === '') {
-          return false
-        }
-        else {
-        return true
+        if(input === '' ) {
+          return ("Please insert first name")
+        } else if (input === "Please insert first nam") {
+          return " "
+        } else {
+          return input
         }
       },
 
       lastName(input) {
         if(input === '') {
-          return false
-        }
-        else {
-        return true
+          return ("Please insert last name")
+        } else if (input === "Please insert last nam") {
+          return " "
+        } else {
+        return input
         }
       },
 
       username(input) {
         if(input === '') {
-          return false
-        }
-        else {
-        return true
+          return ("Please insert username")
+        } else if (input === "Please insert usernam") {
+          return " "
+        } else {
+        return input
         }
       },
 
       about(input) {
         if(input === "") {
-          return false
-        }
-        else {
-          return true
+          return ("Please insert something about yourself")
+        } else if (input === "Please insert something about yoursel") {
+          return " "
+        } else {
+          return input
         }
       }
 

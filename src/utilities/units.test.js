@@ -14,18 +14,18 @@ describe ('updatePhone:', function() {
 // })
 
 test('firstName should return a first name', function() {
-    expect(functions.firstName('')).toEqual(false)
-    expect(functions.firstName('Scott')).toEqual(true)
+    expect(functions.firstName('')).toEqual("Please insert first name")
+    expect(functions.firstName('Scott')).toEqual('Scott')
 })
 
 test('lastName should return a last name', function() {
-    expect(functions.lastName('')).toEqual(false)
-    expect(functions.lastName('Young')).toEqual(true)
+    expect(functions.lastName('')).toEqual("Please insert last name")
+    expect(functions.lastName('Young')).toEqual('Young')
 })
 
 test('username should return a username', function() {
-    expect(functions.username('')).toEqual(false)
-    expect(functions.username('scottisyoung')).toEqual(true)
+    expect(functions.username('')).toEqual("Please insert username")
+    expect(functions.username('scottisyoung')).toEqual('scottisyoung')
 })
 
 // test('About should return 50 characters or more', function() {
@@ -34,6 +34,6 @@ test('username should return a username', function() {
 // })
 
 test('about should return text', function() {
-    expect(functions.about('')).toEqual(false)
-    expect(functions.about('hi how are you')).toEqual(true)
+    expect(functions.about('')).toEqual("Please insert something about yourself")
+    expect(functions.about('hi how are you')).toEqual('hi how are you')
 })
