@@ -33,8 +33,23 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
     "server": "nodemon --watch server"
-  }
+  },
+  "description": "flex",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joshdreiling1/goodhabit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joshdreiling1/goodhabit/issues"
+  },
+  "homepage": "https://github.com/Joshdreiling1/goodhabit#readme"
 }

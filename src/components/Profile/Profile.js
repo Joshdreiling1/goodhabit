@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import units from '../../utilities/units.js';
 
 class Profile extends Component {
     constructor() {
@@ -50,7 +51,7 @@ class Profile extends Component {
         }
         updateUsername(input){
             this.setState({
-                username: input
+                username: units.username(input)
             })
         }
         updateTime(input){
@@ -77,17 +78,17 @@ class Profile extends Component {
         }
         updatePhone(input){
             this.setState({
-                phone: input
+                phone: units.phoneNumberFormat(input)
             })
         }
         updateFirstName(input){
             this.setState({
-                first_name: input
+                first_name: units.firstName(input)
             })
         }
         updateLastName(input){
             this.setState({
-                last_name: input
+                last_name: units.lastName(input)
             })
         }
         updatePicture(input){
@@ -97,7 +98,7 @@ class Profile extends Component {
         }
         updateAbout(input){
             this.setState({
-                about_me: input
+                about_me: units.about(input)
             })
         }
 
