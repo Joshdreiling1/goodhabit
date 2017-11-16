@@ -14,6 +14,60 @@ module.exports = {
         arr.splice(7, 0, '-');
         let correctNumber = arr.join('');
         return correctNumber;
+      },
+
+      firstName(input) {
+        if(input === '') {
+          return false
+        }
+        else {
+        return true
+        }
+      },
+
+      lastName(input) {
+        if(input === '') {
+          return false
+        }
+        else {
+        return true
+        }
+      },
+
+      username(input) {
+        if(input === '') {
+          return false
+        }
+        else {
+        return true
+        }
+      },
+
+      about(input) {
+        if(input === "") {
+          return false
+        }
+        else {
+          return true
+        }
       }
 
+      // about(input) {
+      //   let arr = input.split(',');
+      //   if(arr.length < 50) {
+      //     return false
+      //   }
+      //   else {
+      //   return true
+      //   }
+      // },
+
+      // validateEmail(mail) {
+      //   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      //     return (true)  
+      //   }  
+           
+      //     return (false)
+      //   }
+      
 }
