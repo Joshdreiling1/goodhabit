@@ -13,16 +13,15 @@ module.exports = {
     submitJournalData: (req, res) => {
         let {journal_entry, journal_date, journal_time, journal_title} = req.body
         const db = req.app.get('db')
-        req.app.get('db').journal_entry([journal_entry, journal_date, journal_time, journal_title]).then(profile => {
+        req.app.get('db').journal_entry([req.user.id, journal_entry, journal_date, journal_time, journal_title]).then(profile => {
+            console.log([req.user.id])
             res.status(200).send(profile)
         }).catch((err) => {console.log(err)})
     },
 
     submitGoalData: (req,res) => {
-        let{oneday, threeday, oneweek, twoweek, threeweek, onemonth, twomonth, threemonth, fourmonth, 
-            fivemonth, sixmonth, oneyear} = req.body
         const db = req.app.get('db')
-        req.app.get('db').goals_input([oneday, threeday, oneweek, twoweek, threeweek, onemonth, twomonth, threemonth, 
+        req.app.get('db').goals_input([req.user.id, oneday, threeday, oneweek, twoweek, threeweek, onemonth, twomonth, threemonth, 
             fourmonth, fivemonth, sixmonth, oneyear]).then(profile => {
                 res.status(200).send(profile)
             }).catch((err) => {console.log(err)})
@@ -41,7 +40,7 @@ module.exports = {
     },
 
     getGoalsData: (req, res) => {
-        req.app.get('db').get_goals(1).then(goals => {
+        req.app.get('db').get_goals([req.user.id]).then(goals => {
             res.status(200).send(goals);
         }).catch((err) => {console.log(err)})
     },

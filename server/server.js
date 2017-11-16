@@ -59,7 +59,7 @@ passport.use(new Auth0Strategy({
     })
 }))
 passport.serializeUser(function (userId, done) {
-    console.log('serialize', userId)
+    // console.log('serialize', userId)
     done(null, userId);
 })
 passport.deserializeUser(function (userId, done) {

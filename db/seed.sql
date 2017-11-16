@@ -32,7 +32,7 @@ create table profile (
 
 CREATE TABLE journal (
     id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id),
+    userid INT,
     journal_entry TEXT,
     journal_date TEXT,
     journal_time TEXT,
@@ -41,7 +41,7 @@ CREATE TABLE journal (
 
 CREATE TABLE goals (
     id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id),
+    userid int,
     oneday TEXT,
     threeday TEXT,
     oneweek TEXT,
